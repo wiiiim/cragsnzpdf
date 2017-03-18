@@ -10,7 +10,8 @@ get '/pdf/:id' do |node_id|
 	    :margin_top => "4mm",
 	    :margin_right => "4mm",
 	    :margin_bottom => "4mm",
-	    :margin_left => "4mm"
+	    :margin_left => "4mm",
+      :footer_righ => "Page [page] of [toPage]",
 	   }
   end 
 
