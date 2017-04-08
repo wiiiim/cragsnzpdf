@@ -8,13 +8,13 @@ get '/pdf/:id' do |node_id|
 	PDFKit.configure do |config|
 	  config.default_options = {
 	    :margin_top => "4mm",
-	    :margin_right => "4mm",
-	    :margin_bottom => "4mm",
-	    :margin_left => "4mm",
+	    :margin_right => "0mm",
+	    :margin_bottom => "6mm",
+	    :margin_left => "0mm",
       :footer_center => "Page [page] of [toPage]",
       :footer_font_size => "8"
 	   }
-  end 
+  end
 
   kit = PDFKit.new(CRAGS_PRINT_URL + node_id)
 
