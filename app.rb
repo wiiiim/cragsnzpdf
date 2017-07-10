@@ -19,7 +19,7 @@ get '/pdf/:id' do |node_id|
   url = CRAGS_PRINT_URL + node_id + '?' + (params[:filters] || []).map{|f| "filters[]=#{f}&"}.join('')
   kit = PDFKit.new(url)
 
-	content_type 'application/pdf'
+  content_type 'application/pdf'
   kit.to_pdf
 
 end
